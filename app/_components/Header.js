@@ -1,5 +1,5 @@
 import Navigation from "./Navigation";
-import Logo from "../../starter/components/Logo";
+import Logo from "./Logo";
 
 function Header() {
   return (

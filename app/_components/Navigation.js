@@ -14,10 +14,10 @@ export default function Navigation() {
         </li>
         <li>
           <Link
-            href='/contact'
+            href='/about'
             className='hover:text-accent-400 transition-colors'
           >
-            Contact us
+            About
           </Link>
         </li>
         <li>
