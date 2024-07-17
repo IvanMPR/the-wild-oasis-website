@@ -1,11 +1,10 @@
 import Image from "next/image";
+import TextExpander from "@/app/_components/TextExpander";
+
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
-import TextExpander from "../../app/_components/TextExpander";
-
-function CabinView({ cabin }) {
-  const { id, name, maxCapacity, regularPrice, discount, image, description } =
+export default function Cabin({ cabin }) {
+  const { id, name, description, maxCapacity, image, discount, regularPrice } =
     cabin;
-
   return (
     <div className='grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24'>
       <div className='relative scale-[1.15] -translate-x-3'>
@@ -23,7 +22,6 @@ function CabinView({ cabin }) {
         </h3>
 
         <p className='text-lg text-primary-300 mb-10'>
-          {/* TextExpander is now just a regular React component like all others */}
           <TextExpander>{description}</TextExpander>
         </p>
 
@@ -52,5 +50,3 @@ function CabinView({ cabin }) {
     </div>
   );
 }
-
-export default CabinView;

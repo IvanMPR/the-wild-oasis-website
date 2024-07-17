@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { UsersIcon } from '@heroicons/react/24/solid';
+import { UsersIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import Link from "next/link";
 
 function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
@@ -10,12 +10,11 @@ function CabinCard({ cabin }) {
       <div className='flex-1 relative'>
         <Image
           src={image}
-          fill
           alt={`Cabin ${name}`}
+          fill
           className='object-cover border-r border-primary-800'
         />
       </div>
-
       <div className='flex-grow'>
         <div className='pt-5 pb-4 px-7 bg-primary-950'>
           <h3 className='text-accent-500 font-semibold text-2xl mb-3'>
