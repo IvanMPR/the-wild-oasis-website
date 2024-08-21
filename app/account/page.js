@@ -1,9 +1,11 @@
 export const metadata = { title: "Guest area" };
+import { auth } from "@/app/_lib/auth";
+export default async function Page() {
+  const session = await auth();
 
-export default function Page() {
   return (
     <h2 className='font-semibold text-2xl text-accent-400 mb-7'>
-      Welcome, Ivan
+      Welcome, {session.user.name}
     </h2>
   );
 }
